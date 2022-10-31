@@ -36,4 +36,4 @@ jobs:
         run: npm install -g surge
       
       - name: Deploy website on surge
-        run: surge ./ testme.surge.sh/ --token ${{secrets.TEST_SURGE_TOKEN}}
+        run: surge ./ testsagar.surge.sh/ --token ${{secrets.TEST_SURGE_TOKEN}}
