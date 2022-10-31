@@ -15,24 +15,23 @@ on:
       #This type of runner that job will run on.
         runs-on: ubantu-latest
         #steps represent a sequence of ast wil be executed as of part of the job.
-        
         steps:
           - uses: actions/checkout@v2
           - uses: actions/setup-node@v2
           
-          with:
-            node-version: 12
+        with:
+         node-version: 12
             
             
-          -name: check commands
-           run: pwd 
+        - name: check commands
+        run: pwd 
            
            
-         - name: check ls
-           run: ls
-           #Runs a set of commands using the runner shell.
+        - name: check ls
+        run: ls
+         #Runs a set of commands using the runner shell.
         - name: Install surge
-          run: npm install -g surge
+        run: npm install -g surge
           
         - name : Deploy website on Surge.
-          run: surge ./ sagarali.surge.sh --token ${{secrets.TEST_SURGE_TOKEN}}
+        run: surge ./ sagarali.surge.sh --token ${{secrets.TEST_SURGE_TOKEN}}
